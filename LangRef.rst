@@ -999,7 +999,12 @@ Example:
 Triggers
 ========
 
-.. todo:: Discuss triggers
+Triggers are introduced and adopted by most SMT solvers as practical approach to tackle reasoning with quantified formulas. Using the trigger annotations (also commonly referred as the "patterns"), user can guide the prover when it needs to instantiate the quantified variables. The guidance is meant to provide a heuristic hint so the prover can quickly arrive to the most prolific instantiations.
+
+Limitations of triggers
+-----------------------
+* The pattern must contains all bounded variables
+* The pattern cannot contain stand-alone bounded variables
 
 .. _inconsistent_assumptions:
 
@@ -1026,6 +1031,8 @@ for doing so
   assumptions. The :ref:`symbooglix_backend` backend has a program
   transformation pass that does the transformation described above that can be
   used separately from the main :ref:`symbooglix_backend` tool.
+
+* Invoke ``/smoke`` option with Boogie. ``/smoke`` utilizes the same trick of inserting multiple(?) ``assert false`` to carry out soundness check. 
 
 * Check the assumptions using :ref:`symbooglix_backend`.
   :ref:`symbooglix_backend` has a mode that will check assumptions before
