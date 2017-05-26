@@ -999,7 +999,11 @@ Example:
 Triggers
 ========
 
-Triggers are introduced and adopted by most SMT solvers as practical approach to tackle reasoning with quantified formulas. Using the trigger annotations (also commonly referred as the "patterns"), user can guide the prover when it needs to instantiate the quantified variables. The guidance is meant to provide a heuristic hint so the prover can quickly arrive to the most prolific instantiations.
+Triggers are introduced (Simplify) and adopted by most SMT solvers as practical approach to tackle reasoning with quantified formulas. Using the trigger annotations (also commonly referred as the "patterns"), user can guide the prover when it needs to instantiate the quantified variables. The guidance is meant to provide a heuristic hint so the prover can quickly arrive to the most prolific instantiations of universally quantified formulas. 
+
+Syntax of triggers
+------------------
+.. todo:: trigger syntax (also :weight?)
 
 Limitations of triggers
 -----------------------
